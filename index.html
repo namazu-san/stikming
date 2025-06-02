@@ -337,7 +337,7 @@
         
         <div id="characterSelect">
             <h1>🏃‍♂️ Stickming</h1>
-            <h2>Seleziona il tuo vaso</h2>
+            <h2>Seleziona il tuo Vaso</h2>
             <div class="character-grid" id="characterGrid"></div>
             <button onclick="startGame()" class="floating">🚀Fermati sei ancora in tempo</button>
             <button onclick="showLeaderboard()" class="btn-secondary">🏆 Sala Rossa</button>
@@ -351,7 +351,7 @@
         </div>
         
         <div id="gameOver">
-            <h2 class="game-title">💀 La vogliamo cambiare sta partita!</h2>
+            <h2 class="game-title">💀 La vogliamo cambiare questa partita!</h2>
             <div style="font-size: 24px; margin: 20px 0;">
                 🏆 Punteggio: <span id="finalScore">0</span><br>
                 ⚡ Livello: <span id="finalLevel">1</span>
@@ -393,7 +393,7 @@
         function resizeCanvas() {
             const maxWidth = window.innerWidth - 40;
             const maxHeight = window.innerHeight - 40;
-            const aspectRatio = 900 / 500;
+            const aspectRatio = 1200 / 800;
             
             if (maxWidth / aspectRatio <= maxHeight) {
                 canvas.style.width = maxWidth + 'px';
@@ -531,7 +531,7 @@
         
         function startGame() {
             if (selectedCharacter === null) {
-                alert('🚨 Seleziona un eroe prima di iniziare!');
+                alert('🚨 Seleziona un Vaso prima di iniziare!');
                 return;
             }
             
@@ -543,7 +543,7 @@
         }
         
         function resetGame() {
-            gameState = { score: 0, level: 1, speed: 3, obstacleSpawnRate: 0.015, backgroundSpeed: 1 };
+            gameState = { score: 0, level: 1, speed: 5, obstacleSpawnRate: 0.015, backgroundSpeed: 3 };
             player = { 
                 x: 120, y: 400, width: 35, height: 70, 
                 velocityY: 0, jumping: false, weapon: null, weaponTime: 0,
